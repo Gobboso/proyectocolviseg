@@ -529,14 +529,25 @@
 					var buttonId = $(this).data("target");
 					var $collapseText = $("[data-button='" + buttonId + "']");
 
-					setTimeout(function () {
-						$(this).addClass("d-none");
-					}.bind(this), 300);
+					if ($collapseText.css("max-height") == "55px") {
+						$collapseText.css("max-height", "300px");
+						setTimeout(function () {
+							$collapseText.css("overflow", "visible");
+						}, 300);
 
-					$collapseText.css("max-height", 300);
-					setTimeout(function () {
-						$collapseText.css("overflow", "visible");
-					}, 500);
+						setTimeout(function () {
+							$(this).text("Ver menos");
+						}.bind(this), 300);
+					} else {
+						$collapseText.css("max-height", "55px");
+						setTimeout(function () {
+							$collapseText.css("overflow", "hidden");
+						}, 200);
+
+						setTimeout(function () {
+							$(this).text("Ver más");
+						}.bind(this), 300);
+					}
 				});
 			} else {
 				// Si el ancho de la ventana es menor o igual a 992px, destruimos las animaciones WOW
