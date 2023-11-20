@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="multimedia/icono.ico">
+    <title>Colviseg del Caribe</title>
+
+    <!-- Custom Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- Custom Bootstrap 5 Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Owl Carousel Stylesheets -->
+    <link rel="stylesheet" href="libs/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl-carousel/css/owl.theme.default.min.css">
+
+    <!-- Animate.css Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- jQuery Library -->
+    <script src="libs/jquery/jquery-3.7.0.min.js"></script>
+
+    <!-- Recaptcha v3-->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdhhCQnAAAAAI9_0u21MEKKLGDIF_CefgpCIRxa"></script>
+    <script>
+        $(document).ready(function () {
+            $('.send-form').click(function () {
+                var form = $(this).closest('form');
+                grecaptcha.ready(function () {
+                    grecaptcha.execute('6LdhhCQnAAAAAI9_0u21MEKKLGDIF_CefgpCIRxa', {
+                        action: 'verifyUser'
+                    }).then(function (token) {
+                        form.prepend('<input type="hidden" name="token" value="' + token + '">');
+                        form.prepend('<input type="hidden" name="action" value="verifyUser">');
+                        form.submit();
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+
+<body data-spy="scroll">
+    <div class="container-fluid" style="background-color: var(--bs-primary);">
+        <div class="row text-center justify-content-center p-lg-3 p-md-3 p-2">
+            <div class="col-12 d-flex justify-content-end">
+                <div class="justify-content-center d-flex flex-wrap">
+                    <a href="https://co.computrabajo.com/empresas/ofertas-de-trabajo-de-colviseg-del-caribe-ltda-9A13BAFA96E17B24"
+                        class="top-link d-block">Trabaje con nosotros</a><span class="separator d-block"></span>
+                    <a href="" class="top-link d-block">Empleados</a><span class="separator d-block"></span>
+                    <a href="" class="top-link d-block">Pago de facturas</a><span class="separator d-block"></span>
+                    <a href="" class="top-link d-block me-lg-5 me-md-5">Noticias</a>
+                </div>
+                <a href="https://web.facebook.com/colvidelcaribe/" class="social d-lg-block d-none" target="_blank"><i
+                        class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/colvidelcaribe?lang=es" class="social d-lg-block d-none" target="_blank"><i
+                        class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/@colvisegdelcaribe6399" class="social d-lg-block d-none"
+                    target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.instagram.com/colvisegdelcaribe/" class="social d-lg-block d-none"
+                    target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inicio Encabezado -->
+    <div id="header-placeholder"></div>
+    <div class="container-fluid">
+        <div class="row justify-content-center bg-white" id="fixed-header"
+            style="box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.2);">
+            <div class="col-lg-8 px-0">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white p-4 text-uppercase fw-bold text-primary">
+                    <div class="col-lg-2 bg-white d-none d-lg-block">
+                        <a href="index.html" class="navbar-brand m-0 p-0">
+                            <img src="multimedia/cvsc.svg" width="250" height="90" alt="">
+                        </a>
+                    </div>
+                    <div id="logo" class="d-flex navbar-brand d-lg-none w-25"><a href=""><img src="multimedia/cvsc.svg"
+                                width="190" height="80" alt=""></a></div>
+                    <button class="navbar-toggler m-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header d-block d-lg-none justify-content-between">
+                            <button type="button" class="btn-close align-self-end" style="margin-left: 90%;"
+                                data-bs-dismiss="offcanvas" aria-label="Close"></button><br>
+                            <a href=""><img src="multimedia/cvsc.svg" width="200" height="80" class="mx-auto d-grid"
+                                    alt=""></a>
+                        </div>
+                        <div
+                            class="offcanvas-body text-center d-flex px-5 position-relative justify-content-lg-end justify-content-center">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link p-0 py-1 mx-2" aria-current="page" href="index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link p-0 py-1 mx-2" href="about.html" aria-current="page">
+                                        Nosotros
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link p-0 py-1 mx-2" href="#" id="serviciosDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Servicios
+                                    </a>
+                                    <ul class="dropdown-menu fade p-1 rounded-0 text-center shadow text-capitalize"
+                                        style="font-family: Nexalight;">
+                                        <li><a class="dropdown-item p-2" href="service1.html">Seguridad Humana</a></li>
+                                        <a class="dropdown-item p-2" href="service2.html"
+                                            id="submenu4Dropdown">Seguridad
+                                            Tecnológica</a>
+                                        <li>
+                                            <hr class="dropdown-divider mt-0 p-0">
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item py-2" href="service3.html">Otros Servicios</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn d-lg-none d-block rounded-pill mt-2 p-3" href="contact.html"
+                                        style="width: 220px; background-color: #003f66; color: #fff;">Contáctenos</a>
+                                </li>
+                            </ul>
+                            <div class="d-flex p-2 d-lg-none d-block mb-3 ms-1 position-absolute bottom-0 mx-auto w-75">
+                                <div class="col"><a href="https://web.facebook.com/colvidelcaribe/"
+                                        class="social-sm d-lg-none d-block" target="_blank"><i
+                                            class="fa-brands fa-facebook-f fa-lg"></i></a></div>
+                                <div class="col"><a href="https://twitter.com/colvidelcaribe?lang=es"
+                                        class="social-sm d-lg-none d-block" target="_blank"><i
+                                            class="fa-brands fa-twitter fa-lg"></i></a></div>
+                                <div class="col"><a href="https://www.youtube.com/@colvisegdelcaribe6399"
+                                        class="social-sm d-lg-none d-block" target="_blank"><i
+                                            class="fa-brands fa-youtube fa-lg"></i></a></div>
+                                <div class="col"><a href="https://www.instagram.com/colvisegdelcaribe/"
+                                        class="social-sm d-lg-none d-block" target="_blank"><i
+                                            class="fa-brands fa-instagram fa-lg"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <a id="contactbtn" class="col-1 btn d-lg-block d-none rounded-pill align-self-center p-2"
+                style="background-color: var(--bs-tertiary);" href="contact.html">Contáctenos</a>
+        </div>
+    </div>
+    <!-- Fin Encabezado -->
+
+    <!-- Inicio Formulario -->
+    <div class="container-fluid py-5">
+        <div class="row d-flex justify-content-center">
+            <div id="contact-img" class="col-lg-5 d-lg-block d-none m-0 px-xxl-4 p-0 me-5 mb-4">
+                <img src="multimedia/contacto.jpg" alt="" id="contact-img" class="w-100 h-100 rounded">
+            </div>
+            <div id="contact-form2" class="col-lg-4 col-sm-10 col-md-10 col-12">
+                <h1 class="text-center">Contáctenos</h1>
+                <p class="p-3 fw-bold" style="text-align: justify; font-family: Nexalight;">Nuestro equipo de soporte
+                    técnico revisará tu solicitud y te
+                    responderá lo antes posible. Agradecemos tu paciencia y te aseguramos que haremos todo lo posible
+                    para resolver cualquier problema o responder a tus consultas de manera satisfactoria.
+                </p>
+                <p class="fw-bolder text-center">¡Gracias por elegirnos como tu proveedor de soluciones de seguridad!
+                </p>
+                <form id="contact-form" class="p-4 mx-auto" action="php/mail.php" method="post" autocomplete="off">
+                    <div class="mb-3">
+                        <label for="InputName" class="form-label">Nombre</label>
+                        <input type="text" maxlength="70" class="form-control" id="InputName" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputEmail" class="form-label">Email</label>
+                        <input type="email" maxlength="100" class="form-control" id="InputEmail" name="email"
+                            aria-describedby="emailHelp" required>
+                        <div id="emailHelp" class="form-text">Nunca compartiremos tu correo con terceros.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="PhoneInput">Teléfono</label>
+                        <input type="number" maxlength="15" class="form-control number-input" id="PhoneInput"
+                            name="phone">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="SubjectInput">Asunto</label>
+                        <input type="text" maxlength="100" class="form-control" id="SubjectInput" name="subject">
+                    </div>
+                    <div class="mb-3">
+                        <label for="MessageInput" class="form-label">Mensaje</label>
+                        <textarea id="MessageInput" cols="72" rows="6" class="form-control" name="msg"
+                            required></textarea>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="dataLegal" name="check">
+                        <label class="form-check-label" for="dataLegal">He leído y acepto el <a href=""
+                                data-bs-toggle="modal" data-bs-target="#modalData">tratamiento
+                                de mis
+                                datos personales.</a></label>
+                    </div>
+                    <input type="button" name="enviar" value="Enviar" class="btn btn-primary send-form">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inicio Info Extra -->
+    <div class="container-fluid p-5 bg-light">
+        <div class="row d-flex justify-content-evenly px-5 text-lg-start text-center">
+            <div class="col-lg-6 mb-lg-4 m-xl-0 d-lg-flex d-grid" style="width: fit-content; font-family: Nexalight;">
+                <div class="d-grid rounded-circle mt-lg-3 me-lg-4 m-auto mb-4"
+                    style="background-color: var(--bs-primary); width: 70px; height: 70px;">
+                    <i class="fa-solid fa-location-dot fa-xl m-auto px-3" style="color: #fff;"></i>
+                </div>
+                <div>
+                    <p style="font-family: Nexabold;">Oficina principal:</p>
+                    <p>Carrera 42 #75b-119, Barranquilla, Colombia</p>
+                    <p><span style="font-family: Nexabold;">Teléfono:</span> (+57 605)
+                        3859124, Ext: 200-408</p>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-lg-0 mt-4" style="width: fit-content; font-family: Nexalight;">
+                <p id="e-link" style="font-family: Nexabold;">Email: <a id="email-link"
+                        href="mailto:barranquilla@cvsc.com.co"
+                        style="font-family: Nexalight;">barranquilla@cvsc.com.co</a></p>
+                <p style="font-family: Nexabold;">Contácto con operaciones y central de monitoreo: <a
+                        href="tel:+573135012933" style="font-family: Nexalight;">+57 313 5012933</a> <span
+                        style="font-family: Nexalight;">-</span> <a href="tel:+573207107835"
+                        style="font-family: Nexalight;">+57 320 7107835</a></p>
+                <p style="font-family: Nexabold;">Horario de atención al público: <span
+                        style="font-family: Nexalight;">Lunes a Viernes: 7:00 a.m. a 5:00 p.m.</span></p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Fin Info Extra -->
+
+    <!-- Inicio RQRE -->
+    <div class="container-fluid p-5 mb-5" style="background-color: #B12028;">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-4 d-flex flex-column align-items-center p-3">
+                <h2 class="text-center text-white py-4">¿Tiene alguna sugerencia, queja o reclamo?</h2>
+                <button type="button" class="fill w-50" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                    style="--hover: #6b1217">
+                    <span class="fw-semibold">Realizar PQRS</span>
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 ms-4" id="staticBackdropLabel">Formulario PQRS</h1>
+                                <button type="button" class="btn-close me-1" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body w-100">
+                                <form class="p-4" action="php/mail.php" method="post" autocomplete="off">
+                                    <div class="mb-3">
+                                        <label for="InputName" class="form-label">Nombre</label>
+                                        <input type="text" maxlength="70" class="form-control" id="InputName"
+                                            name="name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="InputEmail" class="form-label">Email</label>
+                                        <input type="email" maxlength="100" class="form-control" id="InputEmail"
+                                            name="email" aria-describedby="emailHelp" required>
+                                        <div id="emailHelp" class="form-text">Nunca compartiremos tu correo con
+                                            terceros.
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="PhoneInput">Teléfono</label>
+                                        <input type="number" maxlength="15" class="form-control number-input"
+                                            id="PhoneInput" name="phone">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="subjectSelect">Asunto</label>
+                                        <select class="form-select form-select-lg" id="subjectSelect" name="subject"
+                                            aria-label="Default select example">
+                                            <option selected>Seleccione la opción deseada</option>
+                                            <option value="1">Sugerencia</option>
+                                            <option value="2">Queja</option>
+                                            <option value="3">Reclamo</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="MessageInput" class="form-label">Mensaje</label>
+                                        <textarea id="MessageInput" cols="72" rows="6" class="form-control" name="msg"
+                                            required></textarea>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="dataLegal2" name="check">
+                                        <label class="form-check-label" for="dataLegal">He leído y acepto el <a href=""
+                                                data-bs-toggle="modal" data-bs-target="#modalData2">tratamiento
+                                                de mis
+                                                datos personales.</a></label>
+                                    </div>
+                                    <input type="button" name="rqre" value="Enviar" class="btn btn-primary send-form">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Fin RQRE -->
+    <!-- Fin Formulario -->
+
+    <div class="modal fade" id="modalData" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 ms-4" id="staticBackdropLabel">Política de Tratamiento de Datos</h1>
+                    <button type="button" class="btn-close me-1" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body w-100 p-5">
+                    <p style="text-align: justify;">COLVISEG DEL CARIBE LTDA, en atención a lo establecido en la ley
+                        1581 de 2012
+                        busca proteger y garantizar la confidencialidad de los datos de sus
+                        colaboradores, clientes, aliados estratégicos, visitantes, y cualquier otro
+                        usado para el cumplimiento de la prestación de los servicios de vigilancia y
+                        seguridad privada, datos a los cuales tiene acceso en virtud de su calidad
+                        como empleador y atendiendo a las actividades que desarrolla para el
+                        cumplimiento de su objeto social, el manejo de la información recolectada a
+                        través de la línea XXXXXXXXXXXX y pagina Web XXXXXXXXXX. <br><br>
+                        Con el fin de determinar prácticas uniformes para la recolección,
+                        almacenamiento, uso, circulación, o supresión de la información que puede
+                        ser relacionada directa o indirectamente con una persona natural y/o
+                        jurídica. <br><br>
+                        Es posible que se recopile información, incluida aquella de índole personal,
+                        sobre usted en la medida en que utiliza nuestros sitios web y a través de
+                        contacto telefónico. Asimismo, de ser el caso, adquirimos información
+                        personal de fuentes confiables de terceros y también recurrimos a los mismos
+                        para que recopilen información personal en nuestro nombre. <br><br>
+                        Esta información recopilada la usamos con fines comerciales tales como:
+                        Cotizaciones y compra de servicio de vigilancia y seguridad privada.
+                    </p>
+                    <button id="activateRadio" class="fill" data-bs-dismiss="modal"
+                        style="--hover: var(--bs-success) ; --color: #004A98">Acepto</button>
+                    <button class="fill ms-3" data-bs-dismiss="modal"
+                        style="--hover: var(--bs-danger); --color: #004A98;">No acepto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalData2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 ms-4" id="staticBackdropLabel">Política de Tratamiento de Datos</h1>
+                    <button type="button" class="btn-close me-1" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body w-100 p-5">
+                    <p style="text-align: justify;">COLVISEG DEL CARIBE LTDA, en atención a lo establecido en la ley
+                        1581 de 2012
+                        busca proteger y garantizar la confidencialidad de los datos de sus
+                        colaboradores, clientes, aliados estratégicos, visitantes, y cualquier otro
+                        usado para el cumplimiento de la prestación de los servicios de vigilancia y
+                        seguridad privada, datos a los cuales tiene acceso en virtud de su calidad
+                        como empleador y atendiendo a las actividades que desarrolla para el
+                        cumplimiento de su objeto social, el manejo de la información recolectada a
+                        través de la línea XXXXXXXXXXXX y pagina Web XXXXXXXXXX. <br><br>
+                        Con el fin de determinar prácticas uniformes para la recolección,
+                        almacenamiento, uso, circulación, o supresión de la información que puede
+                        ser relacionada directa o indirectamente con una persona natural y/o
+                        jurídica. <br><br>
+                        Es posible que se recopile información, incluida aquella de índole personal,
+                        sobre usted en la medida en que utiliza nuestros sitios web y a través de
+                        contacto telefónico. Asimismo, de ser el caso, adquirimos información
+                        personal de fuentes confiables de terceros y también recurrimos a los mismos
+                        para que recopilen información personal en nuestro nombre. <br><br>
+                        Esta información recopilada la usamos con fines comerciales tales como:
+                        Cotizaciones y compra de servicio de vigilancia y seguridad privada.
+                    </p>
+                    <button id="activateRadio2" class="fill" style="--hover: var(--bs-success) ; --color: #004A98"
+                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">Acepto</button>
+                    <button class="fill ms-3" data-bs-dismiss="modal"
+                        style="--hover: var(--bs-danger); --color: #004A98;">No acepto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inicio Pie De Pagina -->
+	<div class="container-fluid px-0" style="background-color: var(--bs-primary);">
+		<div class="container p-0">
+			<div class="row d-flex px-0 py-5 mx-auto">
+				<div class="col-lg-3 col-sm-8 mx-auto p-lg-4 p-3" style="height: fit-content;">
+					<div class="d-flex justify-content-center align-content-center" href=""><img
+							src="multimedia/logo blanco.svg" class="footer-logo" alt=""></div>
+					<div class="d-flex justify-content-center mt-4 align-items-center">
+						<a href="https://web.facebook.com/colvidelcaribe/" class="social-bottom align-content-center"
+							target="_blank"><i class="fa-brands fa-facebook-f" style="padding: 9px 11.5px"></i></a>
+						<a href="https://twitter.com/colvidelcaribe?lang=es" class="social-bottom align-content-center"
+							target="_blank"><i class="fa-brands fa-x-twitter" style="padding: 8.63px 9px"></i></a>
+						<a href="https://www.youtube.com/@colvisegdelcaribe6399"
+							class="social-bottom align-content-center" target="_blank"><i class="fa-brands fa-youtube"
+								style="padding: 9px 8px"></i></a>
+						<a href="https://www.instagram.com/colvisegdelcaribe/"
+							class="social-bottom align-content-center" target="_blank"><i class="fa-brands fa-instagram"
+								style="padding: 9px 10px"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-8 d-lg-inline-flex p-lg-5 p-3 d-sm-block flex-wrap">
+					<div class="col-lg-3 text-white text-center text-lg-start">
+						<h5 class="border-bottom border-secondary py-1">Barranquilla</h5>
+						<a style="color: #fff; font-family: Nexalight;" href="tel:+573114156455">(+57) 3114156455</a>
+						<p style="font-family: Nexalight;">Carrera 42 #75B - 119</p>
+					</div>
+					<div class="col-lg-3 text-white text-center text-lg-start">
+						<h5 class="border-bottom border-secondary py-1">Santa Marta</h5>
+						<a style="color: #fff; font-family: Nexalight;" href="tel:+573216700189">(+57) 3216700189</a>
+						<p style="font-family: Nexalight;">Calle 22 #18A - 72</p>
+					</div>
+					<div class="col-lg-3 text-white text-center text-lg-start">
+						<h5 class="border-bottom border-secondary py-1">Cartagena</h5>
+						<a style="color: #fff; font-family: Nexalight;" href="tel:+573234839068">(+57) 3234839068</a>
+						<p class="lh-sm" style="font-family: Nexalight; font-size: 90%;">Barrio Alameda La Victoria Manzana F Casa 10
+						</p>
+					</div>
+					<div class="col-lg-3 text-white text-center text-lg-start">
+						<h5 class="border-bottom border-secondary py-1">Bogotá</h5>
+						<a style="color: #fff; font-family: Nexalight;" href="tel:+573114156455">(+57) 3114156455</a>
+					</div>
+					<div class="col-lg-3 text-white text-center text-lg-start">
+						<h5 class="border-bottom border-secondary py-1">Riohacha</h5>
+						<a style="color: #fff; font-family: Nexalight;" href="tel:+573216700189">(+57) 3216700189</a>
+						<p style="font-family: Nexalight;">Calle 8 #6 - 84</p>
+					</div>
+					<div class="col-lg-3 text-white text-center text-lg-start">
+						<h5 class="border-bottom border-secondary py-1">Valledupar</h5>
+						<a style="color: #fff; font-family: Nexalight;" href="tel:+573216700189">(+57) 3216700189</a>
+						<p style="font-family: Nexalight;">Carrera 15 #13C - 38</p>
+					</div>
+					<div class="col-lg-3 text-white text-center text-lg-start">
+						<h5 class="border-bottom border-secondary py-1">Montería</h5>
+						<a style="color: #fff; font-family: Nexalight;" href="tel:+573215571812">(+57) 3215571812</a>
+						<p style="font-family: Nexalight;">Calle 24 #10 - 03</p>
+					</div>
+					<div class="col-lg-3 text-white text-center text-lg-start">
+						<h5 class="border-bottom border-secondary py-1">Sincelejo</h5>
+						<a style="color: #fff; font-family: Nexalight;" href="tel:+573215571812">(+57) 3215571812</a>
+						<p style="font-family: Nexalight;">Calle 15 #10A - 147</p>
+					</div>
+					<div id="buc" class="col-lg-3 text-white text-center text-lg-start">
+						<h5 class="border-bottom border-secondary py-1">Bucaramanga</h5>
+						<a style="color: #fff; font-family: Nexalight;" href="tel:+573174305093">(+57) 3174305093</a>
+						<p style="font-family: Nexalight;">Calle 22 #21 - 44</p>
+					</div>
+					<div class="col-lg-3 text-white text-center text-lg-start">
+						<h5 class="border-bottom border-secondary py-1 ps-3">Cúcuta</h5>
+						<a class="ps-3" style="color: #fff; font-family: Nexalight;" href="tel:+573174305093">(+57)
+							3174305093</a>
+						<p class="ps-3" style="font-family: Nexalight; font-size: 90%;">Centro Comercial Bolivar Bloque C - Local II</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footerInfo" class="row mx-auto border-top px-2" style="font-family: Nexalight;">
+			<div class="col-lg-12 d-sm-flex d-lg-block justify-content-center">
+				<p class="text-white text-center pt-3">Copyright &copy; 2023 | Colviseg del Caribe | Vigilado
+					Supervigilancia R.20194100092257 De 27-09-2019 | Todos los derechos
+					reservados - Barranquilla - Colombia </p>
+			</div>
+		</div>
+	</div>
+    <!-- Fin Pie De Pagina -->
+
+    <!-- Back to Top -->
+    <a href="#" id="btncolor" class="btn px-3 back-to-top" role="button" style="display: none;"><i
+            class="fa fa-angle-double-up"></i></a>
+</body>
+
+<!-- JavaScript Libraries -->
+<script src="https://unpkg.com/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="libs/owl-carousel/js/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+<script src="libs/wow/wow.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Asociamos el evento clic al botón
+        $("#activateRadio").on("click", function () {
+            // Activamos el radio button estableciendo su propiedad 'checked' a true
+            $("#dataLegal").prop("checked", true);
+        });
+    });
+    $(document).ready(function () {
+        // Asociamos el evento clic al botón
+        $("#activateRadio2").on("click", function () {
+            // Activamos el radio button estableciendo su propiedad 'checked' a true
+            $("#dataLegal2").prop("checked", true);
+        });
+    });
+</script>
+
+
+<!-- Initializing Wow -->
+<script>
+    new WOW().init();
+</script>
+
+</html>
