@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: SophiaMorgant;
-    src: url('/fonts/Sophia-Morgant.ttf');
+    src: url("/fonts/Sophia-Morgant.ttf") format('truetype');
 }
 
 @font-face {
     font-family: Nexabold;
-    src: url('/fonts/Nexa-Bold.otf');
+    src: url("/fonts/Nexa-Bold.otf") format('opentype');
 }
 
 @font-face {
     font-family: Nexalight;
-    src: url('/fonts/Nexa-Light.otf');
+    src: url("/fonts/Nexa-Light.otf") format('truetype');
 }
 
 /*!
